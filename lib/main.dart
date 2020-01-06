@@ -3,69 +3,83 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(XylophoneApp());
 
+void playSound(int soundNumber) {
+  final player = AudioCache();
+  player.play('note$soundNumber.wav');
+}
+
 class XylophoneApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.black,
         body: SafeArea(
             child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            FlatButton(
-              color: Colors.red,
-              onPressed: () {
-                final player = AudioCache();
-                player.play('note1.wav');
-              },
-              child: Text('Click Me'),
+            Expanded(
+              child: FlatButton(
+                color: Colors.red,
+                onPressed: () {
+                  playSound(1);
+                },
+                child: Text('Click Me'),
+              ),
             ),
-            FlatButton(
-              color: Colors.orange,
-              onPressed: () {
-                final player = AudioCache();
-                player.play('note2.wav');
-              },
-              child: Text('Click Me'),
+            Expanded(
+              child: FlatButton(
+                color: Colors.orange,
+                onPressed: () {
+                  playSound(2);
+                },
+                child: Text('Click Me'),
+              ),
             ),
-            FlatButton(
-              color: Colors.yellow,
-              onPressed: () {
-                final player = AudioCache();
-                player.play('note3.wav');
-              },
-              child: Text('Click Me'),
+            Expanded(
+              child: FlatButton(
+                color: Colors.yellow,
+                onPressed: () {
+                  playSound(3);
+                },
+                child: Text('Click Me'),
+              ),
             ),
-            FlatButton(
-              color: Colors.green,
-              onPressed: () {
-                final player = AudioCache();
-                player.play('note4.wav');
-              },
-              child: Text('Click Me'),
+            Expanded(
+              child: FlatButton(
+                color: Colors.green,
+                onPressed: () {
+                  playSound(4);
+                },
+                child: Text('Click Me'),
+              ),
             ),
-            FlatButton(
-              color: Colors.teal,
-              onPressed: () {
-                final player = AudioCache();
-                player.play('note5.wav');
-              },
-              child: Text('Click Me'),
+            Expanded(
+              child: FlatButton(
+                color: Colors.teal,
+                onPressed: () {
+                  playSound(5);
+                },
+                child: Text('Click Me'),
+              ),
             ),
-            FlatButton(
-              color: Colors.blue,
-              onPressed: () {
-                final player = AudioCache();
-                player.play('note6.wav');
-              },
-              child: Text('Click Me'),
+            Expanded(
+              child: FlatButton(
+                color: Colors.blue,
+                onPressed: () {
+                  playSound(6);
+                },
+                child: Text('Click Me'),
+              ),
             ),
-            FlatButton(
-              color: Colors.purple,
-              onPressed: () {
-                final player = AudioCache();
-                player.play('note7.wav');
-              },
-              child: Text('Click Me'),
+            Expanded(
+              child: FlatButton(
+                color: Colors.purple,
+                onPressed: () {
+                  playSound(7);
+                },
+                child: Text('Click Me'),
+              ),
             ),
           ],
         )),
